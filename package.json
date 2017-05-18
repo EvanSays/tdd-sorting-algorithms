@@ -1,7 +1,7 @@
 {
-  "name": "TDD",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@evansays/sorting-algorithms",
+  "version": "0.0.1",
+  "description": "Includes : Bubble Sort, Insertion Sort, Merge Sort, Quick Sort.",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -17,6 +17,24 @@
     "babel-core": "^6.22.1",
     "babel-preset-env": "^1.1.8",
     "babel-preset-es2015": "^6.22.0",
-    "chai": "^3.5.0"
-  }
+    "chai": "^3.5.0",
+    "locus": "^2.0.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015": "^6.22.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "locus": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuajhun/tdd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshuajhun/tdd/issues"
+  },
+  "homepage": "https://github.com/joshuajhun/tdd#readme"
 }
