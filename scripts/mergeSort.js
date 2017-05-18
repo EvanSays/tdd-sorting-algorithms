@@ -1,7 +1,7 @@
 // Takes in an array and recursively merge sorts it
 function mergeSort(array, p, r) {
   if (p < r) {
-    var q = Math.floor((r + p) / 2);
+    const q = Math.floor((r + p) / 2);
 
     mergeSort(array, p, q);
     mergeSort(array, q + 1, r);
@@ -13,12 +13,12 @@ function mergeSort(array, p, r) {
 // Takes in an array that has two sorted subarrays,
 //  from [p..q] and [q+1..r], and merges the array
 function merge(array, p, q, r) {
-  var lowHalf = [];
-  var highHalf = [];
+  const lowHalf = [];
+  const highHalf = [];
 
-  var k = p;
-  var i;
-  var j;
+  let k = p;
+  let i;
+  let j;
 
   for (i = 0; k <= q; i++, k++) {
     lowHalf[i] = array[k];

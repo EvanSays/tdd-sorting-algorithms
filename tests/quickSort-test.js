@@ -17,7 +17,7 @@ describe('Quick Sort', () => {
   })
 
   it('should sort a large array of + and - numbers', () => {
-    const randomArray = genRandNum(60000)
+    const randomArray = genRandNum(120000)
     let compSorted = Array.from(randomArray);
 
     compSorted = [...randomArray].sort((a, b) => a - b);
@@ -32,7 +32,7 @@ describe('Quick Sort', () => {
   })
 
   it('should sort a large array of uppercase and lowercase characters', () => {
-    const randomArray = genRandChar(6000)
+    const randomArray = genRandChar(80000)
     let compSorted = Array.from(randomArray).sort();
 
     expect(quickSort(randomArray.split(''))).to.deep.equal(compSorted)

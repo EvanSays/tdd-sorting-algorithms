@@ -20,7 +20,7 @@ describe('Merge Sort', () => {
   })
 
   it('should sort a large array of + and - numbers', () => {
-    const randomArray = genRandNum(6000)
+    const randomArray = genRandNum(120000)
     const end = randomArray.length - 1;
     let compSorted = Array.from(randomArray);
 
@@ -38,7 +38,7 @@ describe('Merge Sort', () => {
   })
 
   it('should sort a large array of uppercase and lowercase characters', () => {
-    const randomArray = genRandChar(6000)
+    const randomArray = genRandChar(120000)
     const end = randomArray.length - 1;
     let compSorted = Array.from(randomArray).sort();
 
