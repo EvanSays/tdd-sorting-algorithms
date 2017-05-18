@@ -8,7 +8,7 @@ describe('Insertion Sort', () => {
     assert.isFunction(insertionSort)
   })
 
-  it.only('should sort a small array of + and - numbers', () => {
+  it('should sort a small array of + and - numbers', () => {
     const randomArray = genRandNum(10)
     let compSorted = Array.from(randomArray);
 

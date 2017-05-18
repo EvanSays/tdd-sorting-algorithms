@@ -1,7 +1,6 @@
 function insertionSort(array) {
   for (let i = 0; i < array.length; i++) {
     const temp = array[i];
-    console.log("temp " + temp)
     let j = i - 1;
 
     while (j >= 0 && array[j] > temp) {
@@ -9,7 +8,6 @@ function insertionSort(array) {
       j--
     }
     array[j + 1] = temp;
-    console.log(temp)
   }
   return array;
 }
