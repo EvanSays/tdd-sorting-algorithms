@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshuajhun/tdd.git"
+    "url": "git+https://github.com/EvanSays/tdd-sorting-algorithms.git"
   },
   "bugs": {
-    "url": "https://github.com/joshuajhun/tdd/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/joshuajhun/tdd#readme"
+  "homepage": ""
 }
