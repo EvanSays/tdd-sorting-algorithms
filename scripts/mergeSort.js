@@ -1,60 +1,31 @@
-// Takes in an array and recursively merge sorts it
-function mergeSort(array, p, r) {
-  if (p < r) {
-    const q = Math.floor((r + p) / 2);
 
-    mergeSort(array, p, q);
-    mergeSort(array, q + 1, r);
-    merge(array, p, q, r);
+
+const mergeSort = (a) => {
+  if (a.length <= 1) {
+    return a;
   }
-  return array
+  let mid = Math.round((a.length / 2));
+  let left = a.slice(0, mid);
+  let right = a.slice(mid);
+
+  //console.log(left, right);
+  return merge(mergeSort(left), mergeSort(right));
 }
 
-// Takes in an array that has two sorted subarrays,
-//  from [p..q] and [q+1..r], and merges the array
-function merge(array, p, q, r) {
-  const lowHalf = [];
-  const highHalf = [];
+const merge = (left, right) => {
+  let sorted = [];
 
-  let k = p;
-  let i;
-  let j;
-
-  for (i = 0; k <= q; i++, k++) {
-    lowHalf[i] = array[k];
-  }
-  for (j = 0; k <= r; j++, k++) {
-    highHalf[j] = array[k];
-  }
-
-  k = p;
-  i = 0;
-  j = 0;
-
-  while (i < lowHalf.length && j < highHalf.length) {
-
-    if (lowHalf[i] < highHalf[j]) {
-      array[k] = lowHalf[i];
-      i++;
+  //console.log(sorted, left, right, left[0], right[0]);
+  while (left && left.length > 0 && right && right.length > 0) {
+    if (left[0] <= right[0]) {
+      sorted.push(left.shift());
+      //console.log("left", left, right);
     } else {
-      array[k] = highHalf[j];
-      j++;
+      sorted.push(right.shift());
+      //console.log("left", left, right);
     }
-    k++;
   }
-  while (i < lowHalf.length) {
-    array[k] = lowHalf[i];
-    i++;
-    k++;
-  }
-  while (j < highHalf.length) {
-    array[k] = highHalf[j];
-    j++;
-    k++;
-  }
+  return sorted.concat(left, right);
 }
 
 export default mergeSort;
-
-// var array = [100,50,2,5,9,40,33,22,12]
-// mergeSort(array, 0, array.length - 1)

@@ -1,4 +1,4 @@
-function quickSort(array) {
+const quickSort = (array) => {
 
   let left = [];
   let right = [];

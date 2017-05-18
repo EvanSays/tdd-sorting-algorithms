@@ -1,4 +1,4 @@
-function genRandNum (limit, min = 1, max = 100) {
+const genRandNum = (limit, min = 1, max = 100) => {
   let numArray = [];
 
   for (let i = 0; i < limit; i++) {

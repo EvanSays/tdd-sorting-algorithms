@@ -1,4 +1,4 @@
-function genRandChar(stringLength) {
+const genRandChar = (stringLength) => {
   let text = '';
   const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 

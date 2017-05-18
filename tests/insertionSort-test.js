@@ -13,7 +13,6 @@ describe('Insertion Sort', () => {
     let compSorted = Array.from(randomArray);
 
     compSorted = [...randomArray].sort((a, b) => a - b);
-    console.log(compSorted)
     expect(insertionSort(randomArray)).to.deep.equal(compSorted)
   })
 
