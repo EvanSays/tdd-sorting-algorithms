@@ -9,7 +9,7 @@ describe('Quick Sort', () => {
   })
 
   it('should sort a small array of + and - numbers', () => {
-    const randomArray = genRandNum(10)
+    const randomArray = genRandNum(20)
     let compSorted = Array.from(randomArray);
 
     compSorted = [...randomArray].sort((a, b) => a - b);

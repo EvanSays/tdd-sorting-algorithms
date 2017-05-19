@@ -3,8 +3,8 @@ const quickSort = (array) => {
   let left = [];
   let right = [];
   let ce = 0;
-  let p = array.length - 1
-  let pVal = array[p]
+  let p = array.length - 1;
+  let pVal = array[p];
   let we = 0;
 
   while (array.length > 1) {
@@ -12,8 +12,8 @@ const quickSort = (array) => {
       ce++;
     } else if (array[ce] < array[p]) {
       [ array[ce], array[we] ] = [ array[we], array[ce] ];
-      we++;
       ce++
+      we++;
     } else {
       [ array[p], array[we] ] = [ array[we], array[p] ]
       p = we;
