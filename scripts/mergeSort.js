@@ -8,7 +8,6 @@ const mergeSort = (a) => {
   let left = a.slice(0, mid);
   let right = a.slice(mid);
 
-
   return merge(mergeSort(left), mergeSort(right));
 }
 
